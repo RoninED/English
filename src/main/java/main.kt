@@ -1,33 +1,26 @@
-import com.jayway.jsonpath.JsonPath
-import java.io.File
+import utils.Question
 
 fun main() {
+    var count:Int
+    var answers: List<String>
 
-    println(
-        Question.getRandomQuestion().toString()
-    )
+    while (true) {
+        Question.getRandomQuestion()
 
+        println(Question.questionText)
 
+        answers = Question.mixOfAnswers()
 
-//     var file = File("src/main/resources/questions/testQuestion.json")
-//
-//
-//        var ja = JsonPath.read<List<String>>(file, "$.questions[1]..wrong")
-//
-//    println(ja)
+        count = 1
+        answers.forEach{
+            println("${count++} - $it")
+        }
 
+        print("Выберите вариант:")
+
+        if (answers[readLine()!!.toInt()-1].equals(Question.correctAnswer)) println("Верно\n")
+        else println("Ошибка\n")
+
+    }
 }
 
-
-
-
-//var file = File("src/main/resources/themes/forTest.json")
-//
-//
-//println(
-//JsonPath.read<String>(file, "$..name")
-//)
-//
-//println(
-//JsonPath.read<String>(file, "$.tool.jsonpath.creator.name")
-//)

@@ -1,10 +1,21 @@
 import com.jayway.jsonpath.JsonPath
-import utils.jsonUtils
 import java.io.File
 
 fun main() {
 
-    jsonUtils
+    println(
+        Question.getRandomQuestion().toString()
+    )
+
+
+
+//     var file = File("src/main/resources/questions/testQuestion.json")
+//
+//
+//        var ja = JsonPath.read<List<String>>(file, "$.questions[1]..wrong")
+//
+//    println(ja)
+
 }
 
 

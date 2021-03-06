@@ -8,8 +8,8 @@
         "2.1 wrong 2",
         "2.1 wrong 3"
       ],
-      "theme": "testTheme1",
-      "tagTheme": "testThemeTag1"
+      "theme": "testTheme2.1",
+      "tagTheme": "testThemeTag2.1"
     },
     {
       "text": "2.2 text",
@@ -17,10 +17,11 @@
       "wrong": [
         "2.2 wrong 1",
         "2.2 wrong 2",
-        "2.2 wrong 3"
+        "2.2 wrong 3",
+        "2.2 wrong 4"
       ],
-      "theme": "testTheme2",
-      "tagTheme": "testThemeTag2"
+      "theme": "testTheme2.2",
+      "tagTheme": "testThemeTag2.2"
     }
   ]
 }

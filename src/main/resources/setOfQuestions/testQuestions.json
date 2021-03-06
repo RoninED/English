@@ -7,7 +7,9 @@
         "1.1 wrong 1",
         "1.1 wrong 2",
         "1.1 wrong 3"
-      ]
+      ],
+      "theme": "testTheme1.1",
+      "tagTheme": "testThemeTag1.1"
     },
     {
       "text": "1.2 text",
@@ -16,7 +18,9 @@
         "1.2 wrong 1",
         "1.2 wrong 2",
         "1.2 wrong 3"
-      ]
+      ],
+      "theme": "testTheme1.1",
+      "tagTheme": "testThemeTag1.1"
     }
   ]
 }

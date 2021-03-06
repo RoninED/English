@@ -6,15 +6,14 @@ import kotlin.random.Random
 
 object QuestionSet {
     var fileName: String = QuestionsSets.setOfQuestions[0].name
-
-    private var file:File = File("src/main/resources/setOfQuestions/${utils.QuestionSet.fileName}")
+    private var file:File = File("${QuestionsSets.FOLDER}${fileName}")
 
     /**
      * @param index индекс вопроса в JSON файле
      * @return вопрос по индексу
      */
     fun getQuestion(index: Int): Question {
-        file = File("src/main/resources/setOfQuestions/${utils.QuestionSet.fileName}")
+        file = File("${QuestionsSets.FOLDER}${fileName}")
 
         Question.index = index
 

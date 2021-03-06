@@ -4,6 +4,7 @@ import java.io.File
 import kotlin.random.Random
 
 object QuestionsSets {
+    const val FOLDER: String ="src/main/resources/setOfQuestions/"
 
     /**
      * Файлы с наборами вопросов

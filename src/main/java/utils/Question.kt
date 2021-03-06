@@ -1,5 +1,6 @@
 package utils
 
+import com.jayway.jsonpath.JsonPath
 import kotlin.collections.ArrayList
 
 
@@ -11,6 +12,10 @@ object Question {
     lateinit var questionText: String
     lateinit var correctAnswer: String
     lateinit var wrongAnswer: List<String>
+
+    init {
+        QuestionSet.getQuestion(index)
+    }
 
     /**
      * @return текст вопроса и ответов

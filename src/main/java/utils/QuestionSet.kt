@@ -5,43 +5,23 @@ import net.minidev.json.reader.JsonWriter
 import java.io.File
 import kotlin.random.Random
 
-object QuestionSet {
-    var fileName: String = QuestionsSets.setOfQuestions[0].name
-    var file:File = File("${QuestionsSets.FOLDER}${fileName}")
+class QuestionSet (var questions: ArrayList<Question>){
 
     /**
      * @param index индекс вопроса в JSON файле
      * @return вопрос по индексу
      */
-    fun getQuestion(index: Int): Question {
-        file = File("${QuestionsSets.FOLDER}${fileName}")
-
-        Question.index = index
-
-        Question.questionText = JsonPath.read(file, "$.questions[$index].text")
-
-        Question.correctAnswer = JsonPath.read(file, "$.questions[$index].correct")
-
-        Question.wrongAnswer = JsonPath.read(file, "$.questions[$index].wrong")
-
-
-        return Question
-    }
+    fun getQuestion(index: Int): Question = questions[index]
 
     /**
      * @return рандомный Question
      */
-    fun getRandomQuestion() =
-        getQuestion(
+    fun getRandomQuestion() = getQuestion(
             Random.nextInt(0, getNumbersOfQuestions())
         )
 
     /**
      * @return Количество Question в JSON файле
      */
-    private fun getNumbersOfQuestions(): Int {
-        return JsonPath.read<List<String>>(file, "$.questions").size
-    }
-
-
+    private fun getNumbersOfQuestions(): Int = questions.size
 }

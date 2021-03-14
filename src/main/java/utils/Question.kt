@@ -5,37 +5,22 @@ import kotlin.collections.ArrayList
 
 
 /**
- * Объект вопроса, состоящий из текста вопроса, правильного ответа и неправильных ответов
+ * Вопрос, состоящий из текста вопроса, правильного ответа и неправильных ответов
  */
-object Question {
-    var index: Int = 0
-    lateinit var questionText: String
-    lateinit var correctAnswer: String
-    lateinit var wrongAnswer: List<String>
+data class Question(
+    var text: String,
+    var correct: String,
+    var wrong: List<String>,
+    var theme: String,
+    var tagTheme: String,
+    var progress: Int
+){
 
-    init {
-        QuestionSet.getQuestion(index)
-    }
-
-    /**
-     * @return текст вопроса и ответов
-     */
-    override fun toString() =
-        "text = $questionText" +
-                "\ncorrect = $correctAnswer" +
-                "\nwrong = $wrongAnswer"
-
-    /**
-     * @return перемешанный список ответов
-     */
     fun mixOfAnswers (): List<String> {
         var answers: ArrayList<String> = ArrayList()
-        answers.addAll(wrongAnswer)
-        answers.add(correctAnswer)
+        answers.addAll(wrong)
+        answers.add(correct)
         return answers.shuffled()
     }
 
-    fun upProgress(){
-
-    }
 }

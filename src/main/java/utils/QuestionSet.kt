@@ -1,12 +1,13 @@
 package utils
 
 import com.jayway.jsonpath.JsonPath
+import net.minidev.json.reader.JsonWriter
 import java.io.File
 import kotlin.random.Random
 
 object QuestionSet {
     var fileName: String = QuestionsSets.setOfQuestions[0].name
-    private var file:File = File("${QuestionsSets.FOLDER}${fileName}")
+    var file:File = File("${QuestionsSets.FOLDER}${fileName}")
 
     /**
      * @param index индекс вопроса в JSON файле
@@ -22,6 +23,7 @@ object QuestionSet {
         Question.correctAnswer = JsonPath.read(file, "$.questions[$index].correct")
 
         Question.wrongAnswer = JsonPath.read(file, "$.questions[$index].wrong")
+
 
         return Question
     }

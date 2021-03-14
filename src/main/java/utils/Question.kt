@@ -34,4 +34,8 @@ object Question {
         answers.add(correctAnswer)
         return answers.shuffled()
     }
+
+    fun upProgress(){
+
+    }
 }

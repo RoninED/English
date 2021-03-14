@@ -9,7 +9,8 @@
         "1.1 wrong 3"
       ],
       "theme": "testTheme1.1",
-      "tagTheme": "testThemeTag1.1"
+      "tagTheme": "testThemeTag1.1",
+      "progress": 0
     },
     {
       "text": "1.2 text",
@@ -20,7 +21,8 @@
         "1.2 wrong 3"
       ],
       "theme": "testTheme1.1",
-      "tagTheme": "testThemeTag1.1"
+      "tagTheme": "testThemeTag1.1",
+      "progress": 0
     }
   ]
 }
